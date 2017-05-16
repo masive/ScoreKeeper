@@ -9,7 +9,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="203dp">
+        android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/hello_message_view"
