@@ -1,9 +1,11 @@
 package com.example.android.simplecounter;
 
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         return person;
     }
 
-    private void addUserName() {
+    private void showSportScreen() {
         Person currentUser = createPerson();
         setContentView(R.layout.choose_sport);
         TextView messageTextView = (TextView) findViewById(R.id.hello_message_view);
@@ -29,7 +31,12 @@ public class MainActivity extends AppCompatActivity {
         messageTextView.setText(message);
     }
 
+
     public void nextScreen(View view) {
-        addUserName();
+        showSportScreen();
+    }
+
+    public void previousScreen(View view) {
+        setContentView(R.layout.activity_main);
     }
 }
