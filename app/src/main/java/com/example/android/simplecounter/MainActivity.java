@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         TextView pointsViewTeamA = (TextView) findViewById(R.id.pointsA_text_view);
-        pointsViewTeamA.setText(this.teamA.getScore());
+        pointsViewTeamA.setText(this.teamA.toString());
 
     }
 
@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         TextView pointsViewTeamB = (TextView) findViewById(R.id.pointsB_text_view);
-        pointsViewTeamB.setText(this.teamB.getScore());
+        pointsViewTeamB.setText(this.teamB.toString());
 
     }
 
@@ -87,10 +87,10 @@ public class MainActivity extends AppCompatActivity {
         this.teamB.setScore(score);
 
         TextView pointsViewTeamA = (TextView) findViewById(R.id.pointsA_text_view);
-        pointsViewTeamA.setText(this.teamA.getScore());
+        pointsViewTeamA.setText(this.teamA.toString());
 
         TextView pointsViewTeamB = (TextView) findViewById(R.id.pointsB_text_view);
-        pointsViewTeamB.setText(this.teamB.getScore());
+        pointsViewTeamB.setText(this.teamB.toString());
 
     }
 
