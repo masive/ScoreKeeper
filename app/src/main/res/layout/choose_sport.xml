@@ -1,64 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/hello_message_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
+        android:layout_weight="0"
+        android:text=""
         android:gravity="center_horizontal"
-        android:text="">
+        android:padding="16dp"
+        android:textSize="22sp"/>
 
-    </TextView>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Football">
-
-    </Button>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Baseball">
-
-    </Button>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Basketball">
-
-    </Button>
-
-    </LinearLayout>
-
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:onClick="previousScreen"
-        app:srcCompat="@drawable/flaming_soccer_ball" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/basketball_image_view"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_weight="1"
+        android:layout_margin="24dp"
+        android:layout_gravity="center_horizontal"
+        android:onClick="basketballScreen"
+        app:srcCompat="@drawable/basketball" />
+
+    <ImageView
+        android:id="@+id/football_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_margin="24dp"
+        android:layout_gravity="center_horizontal"
         android:onClick="previousScreen"
-        app:srcCompat="@drawable/flaming_soccer_ball" />
+        app:srcCompat="@drawable/soccer"/>
+
+    <ImageView
+        android:id="@+id/football_image_view1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_margin="24dp"
+        android:layout_gravity="center_horizontal"
+        android:onClick="previousScreen"
+        app:srcCompat="@drawable/baseball" />
 
 
 </LinearLayout>
