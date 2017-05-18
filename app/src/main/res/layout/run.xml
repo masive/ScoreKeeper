@@ -38,20 +38,28 @@
                 android:textColor="#000000"
                 android:textSize="54sp" />
 
-
             <Button
                 android:id="@+id/start_button_playerA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="startTime"
+                android:onClick="startTimeA"
                 android:text="Start" />
 
             <Button
                 android:id="@+id/stop_button_playerA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="stopTime"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:onClick="stopTimeA"
                 android:text="Stop" />
+
+            <Button
+                android:id="@+id/reset_button_playerA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="resetTimeA"
+                android:text="Reset" />
 
         </LinearLayout>
 
@@ -98,15 +106,24 @@
                 android:id="@+id/start_button_playerB"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="startTime"
+                android:onClick="startTimeB"
                 android:text="Start" />
 
             <Button
                 android:id="@+id/stop_button_playerB"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="stopTime"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:onClick="stopTimeB"
                 android:text="Stop" />
+
+            <Button
+                android:id="@+id/reset_button_playerB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="resetTimeB"
+                android:text="Reset" />
 
         </LinearLayout>
 
@@ -115,26 +132,13 @@
 
     <Button
         android:id="@+id/reset_button_view"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="64dp"
-        android:onClick="footballResetGoals"
-        android:text="Reset" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/reset_button_view"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/reset_button_view"
-        android:layout_marginBottom="16dp"
+        android:layout_margin="16dp"
         android:onClick="goToSportsScreen"
-        android:text="Go back" />
-
-
-
+        android:text="Go Back" />
 
 </RelativeLayout>
 

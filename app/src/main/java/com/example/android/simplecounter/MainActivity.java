@@ -1,5 +1,6 @@
 package com.example.android.simplecounter;
 
+import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -131,13 +132,33 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void startTime(View view) {
+    public void startTimeA(View view) {
         Chronometer chronometer = (Chronometer) findViewById(R.id.playerA_chronometer_view);
         chronometer.start();
     }
 
-    public void stopTime(View view) {
+    public void stopTimeA(View view) {
         Chronometer chronometer = (Chronometer) findViewById(R.id.playerA_chronometer_view);
+        chronometer.stop();
+    }
+
+    public void resetTimeA(View view) {
+        Chronometer chronometer = (Chronometer) findViewById(R.id.playerA_chronometer_view);
+        chronometer.setBase(SystemClock.elapsedRealtime());
+    }
+
+    public void startTimeB(View view) {
+        Chronometer chronometer = (Chronometer) findViewById(R.id.playerB_chronometer_view);
+        chronometer.start();
+    }
+
+    public void resetTimeB(View view) {
+        Chronometer chronometer = (Chronometer) findViewById(R.id.playerB_chronometer_view);
+        chronometer.setBase(SystemClock.elapsedRealtime());
+    }
+
+    public void stopTimeB(View view) {
+        Chronometer chronometer = (Chronometer) findViewById(R.id.playerB_chronometer_view);
         chronometer.stop();
     }
 

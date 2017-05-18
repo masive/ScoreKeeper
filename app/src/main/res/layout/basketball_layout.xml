@@ -37,7 +37,7 @@
                 android:fontFamily="sans-serif-light"
                 android:text="0"
                 android:textColor="#000000"
-                android:textSize="56sp" />
+                android:textSize="54sp" />
 
             <Button
                 android:id="@+id/tree_points_button_teamA"
@@ -132,20 +132,22 @@
 
     <Button
         android:id="@+id/reset_button_view"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
         android:layout_marginBottom="64dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         android:onClick="basketballResetPoints"
         android:text="Reset" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/reset_button_view"
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/reset_button_view"
+        android:layout_marginRight="16dp"
         android:layout_marginBottom="16dp"
         android:onClick="goToSportsScreen"
         android:text="Go back" />
