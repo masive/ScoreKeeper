@@ -1,12 +1,12 @@
 package com.example.android.simplecounter;
 
 
-public abstract class BasketballTeam implements AddPoints{
+public abstract class Team implements AddPoints{
     private static final int DEFAULT_SCORE = 0;
 
     private int score;
 
-    BasketballTeam() {
+    Team() {
         this.score = DEFAULT_SCORE;
     }
 

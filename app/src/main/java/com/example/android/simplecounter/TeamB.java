@@ -1,7 +1,7 @@
 package com.example.android.simplecounter;
 
 
-public class TeamB extends BasketballTeam implements AddPoints{
+public class TeamB extends Team implements AddPoints{
 
     public TeamB() {
         super();

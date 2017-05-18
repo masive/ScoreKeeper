@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -25,42 +24,34 @@
                 android:layout_marginBottom="16dp"
                 android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif-medium"
-                android:text="Team A"
+                android:text="Player A lap time"
                 android:textColor="#616161"
                 android:textSize="14sp" />
 
-            <TextView
-                android:id="@+id/pointsA_text_view"
-                android:layout_width="wrap_content"
+            <Chronometer
+                android:id="@+id/playerA_chronometer_view"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="24dp"
+                android:gravity="center_horizontal"
                 android:fontFamily="sans-serif-light"
-                android:text="0"
                 android:textColor="#000000"
-                android:textSize="56sp" />
+                android:textSize="54sp" />
+
 
             <Button
-                android:id="@+id/tree_points_button_teamA"
+                android:id="@+id/start_button_playerA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:onClick="addPointsTeamA"
-                android:text="+3 points" />
+                android:onClick="startTime"
+                android:text="Start" />
 
             <Button
-                android:id="@+id/two_points_button_teamA"
+                android:id="@+id/stop_button_playerA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:onClick="addPointsTeamA"
-                android:text="+2 points" />
-
-            <Button
-                android:id="@+id/one_points_button_teamA"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="addPointsTeamA"
-                android:text="free throw" />
+                android:onClick="stopTime"
+                android:text="Stop" />
 
         </LinearLayout>
 
@@ -88,42 +79,34 @@
                 android:layout_marginBottom="16dp"
                 android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif-medium"
-                android:text="Team B"
+                android:text="Player B lap time"
                 android:textColor="#616161"
                 android:textSize="14sp" />
 
-            <TextView
-                android:id="@+id/pointsB_text_view"
-                android:layout_width="wrap_content"
+            <Chronometer
+                android:id="@+id/playerB_chronometer_view"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="24dp"
+                android:gravity="center_horizontal"
                 android:fontFamily="sans-serif-light"
-                android:text="0"
                 android:textColor="#000000"
-                android:textSize="56sp" />
+                android:textSize="54sp" />
+
 
             <Button
-                android:id="@+id/tree_points_button_teamB"
+                android:id="@+id/start_button_playerB"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="addPointsTeamB"
-                android:text="+3 points" />
+                android:onClick="startTime"
+                android:text="Start" />
 
             <Button
-                android:id="@+id/two_points_button_teamB"
+                android:id="@+id/stop_button_playerB"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"
-                android:onClick="addPointsTeamB"
-                android:text="+2 points" />
-
-            <Button
-                android:id="@+id/one_points_button_teamB"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="addPointsTeamB"
-                android:text="free throw" />
+                android:onClick="stopTime"
+                android:text="Stop" />
 
         </LinearLayout>
 
@@ -137,7 +120,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="64dp"
-        android:onClick="basketballResetPoints"
+        android:onClick="footballResetGoals"
         android:text="Reset" />
 
     <Button
@@ -149,6 +132,9 @@
         android:layout_marginBottom="16dp"
         android:onClick="goToSportsScreen"
         android:text="Go back" />
+
+
+
 
 </RelativeLayout>
 
