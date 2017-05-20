@@ -3,7 +3,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent">
 
 
     <TextView
@@ -19,28 +19,28 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:layout_above="@+id/button2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_above="@+id/button2"
-        android:layout_below="@+id/hello_message_view">
+        android:layout_below="@+id/hello_message_view"
+        android:orientation="vertical">
 
 
-    <ImageButton
-        android:layout_width="96dp"
-        android:layout_height="96dp"
-        android:layout_gravity="center_horizontal"
-        android:onClick="basketballScreen"
-        android:scaleType="fitCenter"
-        app:srcCompat="@drawable/ball_of_basketball"/>
+        <ImageButton
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_gravity="center_horizontal"
+            android:onClick="basketballScreen"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ball_of_basketball" />
 
-    <ImageButton
-        android:layout_width="96dp"
-        android:layout_height="96dp"
-        android:layout_gravity="center_horizontal"
-        android:onClick="footballScreen"
-        android:scaleType="fitCenter"
-        app:srcCompat="@drawable/soccer_ball"/>
+        <ImageButton
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_gravity="center_horizontal"
+            android:onClick="footballScreen"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/soccer_ball" />
 
         <ImageButton
             android:id="@+id/imageButton"

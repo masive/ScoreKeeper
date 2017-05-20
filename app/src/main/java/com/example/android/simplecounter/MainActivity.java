@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void basketballScreen(View view) {
-        setContentView(R.layout.basketball_layout);
+        setContentView(R.layout.basketball);
 
     }
 
