@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent" >
 
 
     <TextView
@@ -12,10 +11,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="22dp"
-        android:layout_weight="1"
         android:gravity="center_horizontal"
         android:text=""
         android:textSize="22sp" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/button2"
+        android:layout_below="@+id/hello_message_view">
+
 
     <ImageButton
         android:layout_width="96dp"
@@ -33,58 +42,28 @@
         android:scaleType="fitCenter"
         app:srcCompat="@drawable/soccer_ball"/>
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="96dp"
-        android:layout_height="96dp"
-        android:layout_gravity="center_horizontal"
-        android:onClick="runScreen"
-        android:scaleType="fitCenter"
-        app:srcCompat="@drawable/running" />
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_gravity="center_horizontal"
+            android:onClick="runScreen"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/running" />
 
-
-    <!--<ImageView
-        android:id="@+id/basketball_image_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="24dp"
-        android:layout_weight="1"
-        android:onClick="basketballScreen"
-        app:srcCompat="@drawable/basketball" />
-
-    <ImageView
-        android:id="@+id/football_image_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="24dp"
-        android:layout_weight="1"
-        android:onClick="footballScreen"
-        app:srcCompat="@drawable/soccer" />
-
-    <ImageView
-        android:id="@+id/football_image_view1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="24dp"
-        android:layout_weight="1"
-        android:onClick="runScreen"
-        app:srcCompat="@drawable/running" />-->
+    </LinearLayout>
 
 
     <Button
         android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
         android:layout_marginBottom="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginTop="64dp"
         android:onClick="goToHomeScreen"
         android:text="Go back" />
 
 
-</LinearLayout>
+</RelativeLayout>

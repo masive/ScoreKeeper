@@ -13,6 +13,8 @@ public class MainActivity extends AppCompatActivity {
 
     private Team teamA = new TeamA();
     private Team teamB = new TeamB();
+    private long timeWhenStoppedPlayerA = 0;
+    private long timeWhenStoppedPlayerB = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         Person currentUser = createPerson();
         setContentView(R.layout.sports);
         TextView messageTextView = (TextView) findViewById(R.id.hello_message_view);
-        String message = String.format("Dear %s, please choose a sport event!", currentUser.getName());
+        String message = String.format("Hi %s, please select a sport event!", currentUser.getName());
         messageTextView.setText(message);
     }
 
@@ -134,32 +136,38 @@ public class MainActivity extends AppCompatActivity {
 
     public void startTimeA(View view) {
         Chronometer chronometer = (Chronometer) findViewById(R.id.playerA_chronometer_view);
+        chronometer.setBase(SystemClock.elapsedRealtime() + this.timeWhenStoppedPlayerA);
         chronometer.start();
     }
 
     public void stopTimeA(View view) {
         Chronometer chronometer = (Chronometer) findViewById(R.id.playerA_chronometer_view);
+        this.timeWhenStoppedPlayerA = chronometer.getBase() - SystemClock.elapsedRealtime();
         chronometer.stop();
     }
 
     public void resetTimeA(View view) {
         Chronometer chronometer = (Chronometer) findViewById(R.id.playerA_chronometer_view);
         chronometer.setBase(SystemClock.elapsedRealtime());
+        this.timeWhenStoppedPlayerA = 0;
     }
 
     public void startTimeB(View view) {
         Chronometer chronometer = (Chronometer) findViewById(R.id.playerB_chronometer_view);
+        chronometer.setBase(SystemClock.elapsedRealtime() + this.timeWhenStoppedPlayerB);
         chronometer.start();
+    }
+
+    public void stopTimeB(View view) {
+        Chronometer chronometer = (Chronometer) findViewById(R.id.playerB_chronometer_view);
+        this.timeWhenStoppedPlayerB = chronometer.getBase() - SystemClock.elapsedRealtime();
+        chronometer.stop();
     }
 
     public void resetTimeB(View view) {
         Chronometer chronometer = (Chronometer) findViewById(R.id.playerB_chronometer_view);
         chronometer.setBase(SystemClock.elapsedRealtime());
-    }
-
-    public void stopTimeB(View view) {
-        Chronometer chronometer = (Chronometer) findViewById(R.id.playerB_chronometer_view);
-        chronometer.stop();
+        this.timeWhenStoppedPlayerB = 0;
     }
 
 
